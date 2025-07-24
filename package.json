@@ -1,0 +1,23 @@
+{
+  "name": "bizfluencer.ai",
+  "version": "1.0.0",
+  "description": "A trusted platform for brands and influencers to collaborate with confidence",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "build": "npm run build --workspace=frontend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build:backend": "npm run build --workspace=backend",
+    "install:frontend": "npm install --workspace=frontend",
+    "install:backend": "npm install --workspace=backend"
+  },
+  "keywords": ["influencer", "marketing", "collaboration", "platform"],
+  "author": "",
+  "license": "MIT"
+} 
