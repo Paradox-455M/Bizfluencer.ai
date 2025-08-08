@@ -1,6 +1,6 @@
 // API Configuration
-// Hardcoded to production backend URL per request
-const API_BASE_URL = 'https://bizfluencerai-production.up.railway.app';
+// Local development default; configure per environment as needed
+const API_BASE_URL = 'http://localhost:5000';
 
 export interface WaitlistEntry {
   email: string;
