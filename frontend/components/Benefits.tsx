@@ -1,4 +1,5 @@
 import React from 'react';
+import howItWorksImage from '../assets/bizfluencer.png';
 import { VerifiedIcon, CampaignIcon, EscrowIcon } from './icons';
 
 const benefits = [
@@ -24,16 +25,18 @@ const BenefitCard: React.FC<{ benefit: typeof benefits[0] }> = ({ benefit }) => 
   </div>
 );
 
-import logoUrl from '../assets/bizfluencer.png';
-
 const HowItWorksVideo = () => (
-  <div className="mt-12 w-full aspect-video bg-dark-card border border-dark-border rounded-2xl flex items-center justify-center relative overflow-hidden">
-    <div className="absolute inset-0 bg-grid-pattern opacity-5" style={{ '--grid-color': 'rgba(255,255,255,0.2)', '--grid-size': '30px' } as React.CSSProperties} />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-    <div className="relative z-10 flex flex-col items-center text-center">
-      <img src={logoUrl} alt="Bizfluencer Logo" className="w-28 h-28 rounded-lg shadow-glow-blue" />
+    <div className="mt-12 w-full aspect-video bg-dark-card border border-dark-border rounded-2xl flex items-center justify-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5" style={{'--grid-color': 'rgba(255,255,255,0.2)', '--grid-size': '30px'} as React.CSSProperties} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"/>
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${howItWorksImage})` }} />
+        <div className="relative z-10 flex flex-col items-center text-center">
+            <button className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+                <svg className="w-8 h-8 ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            </button>
+            <p className="mt-4 text-lg font-medium text-light-text">See How It Works</p>
+        </div>
     </div>
-  </div>
 );
 
 

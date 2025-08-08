@@ -1,6 +1,5 @@
 import React from 'react';
 import { LogoIcon } from './icons';
-import logoUrl from '../assets/bizfluencer.png';
 
 interface HeaderProps {
   onWaitlistClick: () => void;
@@ -18,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ onWaitlistClick, onBenefitsClick, onRev
             onClick={onHomeClick}
             className="flex items-center gap-2 text-xl font-bold text-light-text hover:opacity-80 transition-opacity cursor-pointer"
           >
-            <img src={logoUrl} alt="Bizfluencer" className="h-6 w-6 rounded" />
+            <LogoIcon className="h-6 w-6 text-brand-blue" />
             Bizfluencer.ai
           </button>
           <nav className="hidden md:flex items-center gap-8">

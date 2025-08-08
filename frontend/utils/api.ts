@@ -1,11 +1,12 @@
 // API Configuration
 // Use env when provided; otherwise auto-select based on host
-const API_BASE_URL =
-  (import.meta as any).env?.VITE_API_BASE_URL ||
-  (typeof window !== 'undefined' && window.location.hostname.endsWith('vercel.app')
-    ? 'https://bizfluencerai-production.up.railway.app'
-    : 'http://localhost:5000');
+// const API_BASE_URL =
+//   (import.meta as any).env?.VITE_API_BASE_URL ||
+//   (typeof window !== 'undefined' && window.location.hostname.endsWith('vercel.app')
+//     ? 'https://bizfluencerai-production.up.railway.app'
+//     : 'http://localhost:5000');
 
+const API_BASE_URL ='https://bizfluencerai-production.up.railway.app';
 export interface WaitlistEntry {
   email: string;
   user_type: 'Influencer' | 'Brand';
