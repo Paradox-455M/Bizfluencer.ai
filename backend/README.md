@@ -1,53 +1,21 @@
-# Bizfluencer.ai Backend API
+# Backend (Express + Supabase)
 
-Backend API for the Bizfluencer.ai platform built with Node.js and Express.
+## Run Locally
 
-## Directory Structure
-
-```
-backend/
-├── src/
-│   ├── controllers/    # Request handlers
-│   ├── middleware/     # Custom middleware
-│   ├── models/         # Data models
-│   ├── routes/         # API routes
-│   └── index.js        # Main server file
-├── package.json
-└── .env.example        # Environment variables template
+```bash
+npm install
+npm run dev
 ```
 
-## Setup
+## Required Environment Variables
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+- `PORT` (default 5000)
+- `SUPABASE_URL`
+- `SUPABASE_ANON_KEY`
 
-2. Create environment file:
-   ```bash
-   cp .env.example .env
-   ```
+## Deploy on Railway
 
-3. Start development server:
-   ```bash
-   npm run dev
-   ```
-
-## API Endpoints
-
-### Base URL
-- Development: `http://localhost:5000`
-
-### Available Endpoints
-- `GET /` - API status
-- `GET /health` - Health check
-
-## Planned Features
-
-- [ ] User Authentication (JWT)
-- [ ] Influencer Profiles
-- [ ] Brand Profiles  
-- [ ] Campaign Management
-- [ ] Escrow Payment System
-- [ ] Messaging System
-- [ ] File Upload (Profile pictures, media) 
+1. Create a new Railway project → Deploy from GitHub and select this repository.
+2. Set environment variables above in Railway project settings.
+3. Railway will detect Node and run using `railway.json` with healthcheck `/health`.
+4. After deploy, copy the public URL and set it as `VITE_API_BASE_URL` in Vercel. 

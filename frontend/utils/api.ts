@@ -1,5 +1,6 @@
 // API Configuration
-const API_BASE_URL = 'http://localhost:5000';
+// Use Vite environment variable for deployment; fallback to localhost for local dev
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
 
 export interface WaitlistEntry {
   email: string;
