@@ -1,6 +1,10 @@
 // API Configuration
-// Local development default; configure per environment as needed
-const API_BASE_URL = 'http://localhost:5000';
+// Use env when provided; otherwise auto-select based on host
+const API_BASE_URL =
+  (import.meta as any).env?.VITE_API_BASE_URL ||
+  (typeof window !== 'undefined' && window.location.hostname.endsWith('vercel.app')
+    ? 'https://bizfluencerai-production.up.railway.app'
+    : 'http://localhost:5000');
 
 export interface WaitlistEntry {
   email: string;
